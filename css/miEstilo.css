@@ -1,0 +1,488 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+select,
+input {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+output {
+    color: #9c27b0;
+    font-size: 12px;
+}
+
+:focus {
+    border: none;
+    outline: 0;
+}
+
+.btn {
+    border-radius: 5px;
+    text-transform: uppercase;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #fff;
+}
+
+.btn-default {
+    background: #9c27b0;
+}
+
+.btn-outline {
+    width: 100%;
+    border: solid 1px #9c27b0;
+    color: #9c27b0;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    border-color: #9c27b0;
+}
+
+.btn:hover {
+    background: #9c27b0;
+    color: #e1bee7;
+}
+
+.btn-outline:last-child {
+    margin-top: 5px;
+}
+
+.from-to {
+    position: relative;
+    display: block;
+    min-height: 72px;
+    padding: 12px 20px;
+    position: relative;
+    background: #e3a4ee;
+    margin-bottom: 12px;
+}
+
+.pac-container {
+    width: 400px !important;
+}
+
+.select-circle {
+    width: calc(100% - 35px);
+    position: relative;
+}
+
+#puntosIntermedios {
+    width: calc(100% - 50px);
+}
+
+.select-circle {
+    margin-left: 35px;
+}
+
+.from-to .circle,
+.medios,
+.agregarPts {
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #292A30;
+    -webkit-text-fill-color: initial;
+}
+
+.from-to .circle:first-child,
+.medios {
+    margin-bottom: 10px;
+}
+
+.select-circle::before {
+    background: url(../imagenes/dot.png);
+    background-size: 4px;
+    content: '';
+    display: block;
+    height: 28px;
+    position: absolute;
+    width: 4px;
+    left: -27px;
+    top: 50%;
+    margin-top: -13px;
+}
+
+.circle::before {
+    background: 0 0;
+    border: 2px solid #7A7C7F;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    left: -30px;
+    margin-top: -6px;
+}
+
+.circle.to::before {
+    background: #9c27b0;
+    border-color: #9c27b0;
+}
+
+.from-to select,
+#comoIr,
+#tipoDeLugar,
+#direccion,
+#agregar {
+    background: 0 0;
+    border: none;
+    height: 30px;
+    outline: 0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: baseline;
+    width: calc(100% - 70px);
+}
+
+.input-label,
+label {
+    font-size: 12px;
+    color: #000;
+    display: inline-block;
+    font-weight: 700;
+    height: 100%;
+}
+
+#labelIntermedios {
+    padding-top: 10px;
+}
+
+.input-label {
+    line-height: 30px;
+    max-width: 62px;
+    min-width: 42px;
+    padding: 0 0 0 10px;
+}
+
+.radio-metros {
+    height: 30px;
+    line-height: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: calc(100% - 96px);
+    height: 2px;
+    outline: none;
+    border-radius: 2px;
+    background: #7A7C7F;
+    vertical-align: middle;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #e1bee7;
+    border: 2px solid #7A7C7F;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.intermedios {
+    display: block;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#puntosIntermedios {
+    height: 60px;
+    padding: 2px 0;
+}
+
+.arrows {
+    width: 45px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    background: #9c27b0;
+}
+
+.arrows input[type=button] {
+    text-align: left;
+    text-indent: 10px;
+    font-size: 10px;
+    width: 45px;
+    display: block;
+    padding: 0;
+    color: transparent;
+    position: relative;
+}
+
+.up,
+.down {
+    width: 100%;
+}
+
+.up:before,
+.down:before {
+    position: absolute;
+    cursor: pointer;
+    width: 12px;
+    right: 16px;
+    z-index: 2;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    backface-visibility: hidden;
+}
+
+.up:before {
+    color: #fff;
+    content: '▲';
+}
+
+.down:before {
+    color: #fff;
+    content: '▼';
+}
+
+#submit {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+#map {
+    height: 100%;
+}
+
+#pano {
+    height: 25%;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    width: calc(100% - 320px);
+    right: 0;
+    border-top: solid 10px #fff;
+    visibility: hidden;
+}
+
+#left-panel {
+    float: left;
+    text-align: left;
+    background: #e1bee7;
+    height: 100%;
+    width: 320px;
+}
+
+.input-choose {
+    padding: 0 20px;
+}
+
+.directions {
+    margin-top: 15px;
+    overflow-y: scroll;
+    height: calc(100% - 478px);
+    font-size: 13px;
+}
+
+#directions-panel-summary .adp {
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+/*----------------------- BANNER ---------------------------*/
+.popup {
+    background-image: url(../imagenes/v3.jpg);
+	background-size: cover;
+    color: #f0f0f0;
+    left: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 12%;
+    width: 750px;
+    height: 450px;
+    z-index: 101;
+    -moz-box-shadow: 0px 0px 10px 1px #e1bee7;
+    -webkit-box-shadow: 0px 0px 10px 1px #e1bee7;
+    box-shadow: 0px 0px 10px 1px #e1bee7;
+    border-radius:10px;
+    -moz-border-radius:10px;
+}
+
+
+.overlay {
+    background: #9c27b0;
+    bottom: 0;
+    leFt: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    opacity:0.5;
+}
+
+a.close {
+    cursor: pointer;
+    float: right;
+    height: 26px;
+    left: 28px;
+    position: relative;
+    top: -32px;
+    width: 26px;
+    z-index: 300;
+}
+
+.close img {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+/*----------------------- TERMINA BANNER ---------------------------*/
+
+/*----------------------- EFECTO TEXTO BANNER ---------------------------*/
+/* https://tympanus.net/codrops/2012/04/17/rotating-words-with-css-animations/ */
+.rw-wrapper{
+	width: 80%;
+	position: relative;
+	margin: auto;
+	padding: auto;
+}
+.rw-words{
+    position: absolute;
+  	left: 0px;
+	top: 0px;
+	height: 80px;
+	width: 200px;
+	-webkit-perspective: 400px;
+	perspective: 400px;
+}
+.rw-words span{
+    position: absolute;
+	font-size: 520%;
+	color: transparent;
+	text-shadow: 0px 0px 80px rgba(255,255,255,1);
+	opacity: 0;
+	-webkit-animation: rotateWord 18s linear infinite 0s;
+	-ms-animation: rotateWord 18s linear infinite 0s;
+	animation: rotateWord 18s linear infinite 0s;
+}
+.rw-words span:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+	-ms-animation-delay: 3s; 
+	animation-delay: 3s; 
+}
+.rw-words span:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+	-ms-animation-delay: 6s; 
+	animation-delay: 6s; 
+}
+.rw-words span:nth-child(4) { 
+    -webkit-animation-delay: 9s; 
+	-ms-animation-delay: 9s; 
+	animation-delay: 9s; 
+}
+.rw-words span:nth-child(5) { 
+    -webkit-animation-delay: 12s; 
+	-ms-animation-delay: 12s; 
+	animation-delay: 12s; 
+}
+.rw-words span:nth-child(6) { 
+    -webkit-animation-delay: 15s; 
+	-ms-animation-delay: 15s; 
+	animation-delay: 15s; 
+}
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; -webkit-animation-timing-function: ease-in; -webkit-transform: translateY(-200px) translateZ(300px) rotateY(-120deg); }
+    5% { opacity: 1; -webkit-animation-timing-function: ease-out; -webkit-transform: translateY(0px) translateZ(0px) rotateY(0deg); }
+	6% { text-shadow: 0px 0px 0px rgba(255,255,255,1); color: #fff; }
+    17% { opacity: 1; text-shadow: 0px 0px 0px rgba(255,255,255,1); color: #fff; }
+    20% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; -ms-animation-timing-function: ease-in; -ms-transform: translateY(-200px) translateZ(300px) rotateY(-120deg); }
+    5% { opacity: 1; -ms-animation-timing-function: ease-out; -ms-transform: translateY(0px) translateZ(0px) rotateY(0deg); }
+	6% { text-shadow: 0px 0px 0px rgba(255,255,255,1); color: #fff; }
+    17% { opacity: 1; text-shadow: 0px 0px 0px rgba(255,255,255,1); color: #fff; }
+    20% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform: translateY(-200px) translateZ(300px) rotateY(-120deg); transform: translateY(-200px) translateZ(300px) rotateY(-120deg); }
+    5% { opacity: 1; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; -webkit-transform: translateY(0px) translateZ(0px) rotateY(0deg); transform: translateY(0px) translateZ(0px) rotateY(0deg); }
+	6% { text-shadow: 0px 0px 0px rgba(255,255,255,1); color: #fff; }
+    17% { opacity: 1; text-shadow: 0px 0px 0px rgba(255,255,255,1); color: #fff; }
+    20% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@media screen and (max-width: 1060px){
+    .popup {            
+            width: 100%;
+            height: 100%;
+             }
+	.rw-words { left: 15px; top: 50px; }
+	.rw-words span { font-size: 10%; }
+}
+@media screen and (max-width: 400px){
+    .popup {
+            width: 65%;
+            height: 20%;
+            /*background-size: cover;*/
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+        }
+	.rw-words { left: 5px; top: -10px; }
+	.rw-words span { font-size: 100%; }
+}
+
+
+/*----------------------- TERMINA EFECTO TEXTO BANNER ---------------------------*/
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #left-panel,
+    #map,
+    #pano {
+        width: 100%;
+        float: none;
+    }
+    #left-panel {
+        height: auto;
+    }
+    .hide-xs {
+        display: none;
+    }
+    #submit {
+        margin-bottom: 20px;
+    }
+    .input-choose {
+        overflow-y: scroll;
+    }
+}
+
